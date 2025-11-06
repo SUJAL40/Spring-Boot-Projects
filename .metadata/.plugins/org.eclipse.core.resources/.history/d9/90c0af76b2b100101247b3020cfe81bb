@@ -1,0 +1,20 @@
+package in.sujal.spring.beans;
+
+public class PaymentService {
+	
+	private IPayment payment;
+	public PaymentService(IPayment payment) {
+		this.payment = payment;
+	}
+	
+	public void doPayment(double billPay) {
+		boolean status = payment.processPayment(billPay);
+		//payment is injected object
+		if(status) {
+			System.out.println("Receipte Printed.....");
+		}else {
+			System.out.println("Card Declined!!!!!!");
+		}
+	}
+
+}

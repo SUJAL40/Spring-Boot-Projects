@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define all beans -->
+
+    <!-- Credit card payment bean -->
+    <bean id="credit" class="in.sujal.spring.beans.CreditCardPayment"/>
+
+    <!-- Debit card payment bean -->
+    <bean id="debit" class="in.sujal.spring.beans.DebitCardPayment"/>
+
+    <!-- PaymentService bean using constructor injection -->
+    <bean id="payment" class="in.sujal.spring.beans.PaymentService">
+        <!-- constructor-arg is used for constructor injection -->
+        <constructor-arg name="payment" ref="credit"/>  
+        <!-- You can change ref="debit" if you want DebitCardPayment instead -->
+    </bean>
+
+</beans>

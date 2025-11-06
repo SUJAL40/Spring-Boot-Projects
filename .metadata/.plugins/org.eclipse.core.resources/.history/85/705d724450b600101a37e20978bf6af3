@@ -1,0 +1,11 @@
+package in.sujal.beans;
+
+public class OracleDBRepository implements ReportDAO {
+
+	@Override
+	public void getData() {
+		System.out.println("Getting data form Oracle DB.....");
+
+	}
+
+}

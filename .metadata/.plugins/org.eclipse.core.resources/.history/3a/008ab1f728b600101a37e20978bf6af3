@@ -1,0 +1,6 @@
+package in.sujal.config;
+
+
+public class AppConfig {
+
+}

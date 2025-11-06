@@ -1,0 +1,10 @@
+package in.sujal.dao;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class UserDao implements InitializingBean,DisposableBean{
+	
+	
+
+}

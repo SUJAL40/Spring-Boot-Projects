@@ -1,0 +1,23 @@
+package in.sujal;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class UserDao implements InitializingBean,DisposableBean{
+	
+	
+	
+	
+	public void init() {
+		System.out.println("Getting DB Connection.....(init)");
+	}
+	
+	public void getData() {
+		System.out.println("Getting data from DB.....");
+	}
+	
+	public void destroy() {
+		System.out.println("Closing DB Donnection.....(destroy)");
+	}
+
+}

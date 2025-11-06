@@ -1,0 +1,13 @@
+package in.sujal.spring.beans;
+
+public class PertrolEngin implements IEngin{
+	
+	public PertrolEngin() {
+		System.out.println("PertrolEngin :: 0-Constructor");
+	   }
+	
+	public int start() {
+		System.out.println("PertrolEngin Started.....");
+		return 1;
+	}
+}

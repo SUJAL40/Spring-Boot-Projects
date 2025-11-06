@@ -1,0 +1,7 @@
+package in.sujal.runner;
+
+import org.springframework.boot.CommandLineRunner;
+
+public class MycmdRunner implements CommandLineRunner{
+
+}

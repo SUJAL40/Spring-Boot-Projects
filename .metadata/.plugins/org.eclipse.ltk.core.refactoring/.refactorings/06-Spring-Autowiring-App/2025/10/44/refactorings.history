@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;OracleDBRepository.java&apos; to &apos;06-Spring-Autowiring-App/src/main/java/in.sujal.beans&apos;&#x0D;&#x0A;- Original project: &apos;06-Spring-Autowiring-App&apos;&#x0D;&#x0A;- Destination element: &apos;06-Spring-Autowiring-App/src/main/java/in.sujal.beans&apos;&#x0D;&#x0A;- Original element: &apos;in.sujal.beans.OracleDBRepository.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.sujal.beans" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.sujal.beans{OracleDBRepository.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1761911658513" units="1" version="1.0"/>
+</session>

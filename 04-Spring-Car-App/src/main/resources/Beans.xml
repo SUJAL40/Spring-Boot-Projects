@@ -6,7 +6,7 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define all beans -->
-    <bean id="eng" class="in.sujal.spring.beans.DiselEngin" autowire-candidate="false"></bean>
+    <bean id="eng" class="in.sujal.spring.beans.DiselEngin" primary="true"></bean>
 	<bean id="eng1" class="in.sujal.spring.beans.PetrolEngin"></bean>
 	<bean id="car" class="in.sujal.spring.beans.Car" autowire="byType">
 	

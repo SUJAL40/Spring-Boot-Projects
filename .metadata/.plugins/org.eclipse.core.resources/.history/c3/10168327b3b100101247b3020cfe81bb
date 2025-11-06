@@ -1,0 +1,17 @@
+package in.sujal.spring.beans;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//To start IOC Container
+	ApplicationContext contex = new ClassPathXmlApplicationContext("Beans.xml");
+		//if want to call doPayment method by using PaymentService 
+		//class object. To get object from IOC -> getBeans method 
+	PaymentService service = context.getBean(PaymentService.class);
+	service.doPayment(195.00);
+	}
+
+}

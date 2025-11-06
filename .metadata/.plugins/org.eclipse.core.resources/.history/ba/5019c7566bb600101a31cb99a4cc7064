@@ -1,0 +1,25 @@
+package in.sujal;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UserDao {
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("Getting DB connection....(init)");
+	}
+	
+	public void destroy() {
+		System.out.println("Closing DB Donnection.....(destroy)");
+	}
+	
+	@PreDestroy
+	public void getData() {
+		System.out.println("Getting data from DB.....");
+	}
+	
+	
+}

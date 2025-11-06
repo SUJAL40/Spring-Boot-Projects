@@ -1,0 +1,16 @@
+package in.sujal.beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Robot {
+	
+	@Autowired
+	private Chip chip;
+	
+	public void doWork() {
+		String chip = chip.chipType();
+	}
+	
+}

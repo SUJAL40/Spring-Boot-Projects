@@ -1,0 +1,3 @@
+spring.application.name=09-SB-First-App
+spring.security.user.name = sujal
+spring.security.user.password = sk@123

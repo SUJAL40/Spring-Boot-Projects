@@ -1,0 +1,5 @@
+package in.sujal.bean;
+
+public class ReportService {
+
+}

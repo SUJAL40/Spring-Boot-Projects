@@ -1,0 +1,31 @@
+package in.sujal.spring.beans;
+
+public class Car{
+	
+	private IEngin eng;
+	
+	public Car() {
+		System.out.println("Car :: 0-Constructor");
+	}
+	public void drive() {
+		
+		//car is extending properties form engin ,now car can't extend property form 
+		//another class -> this is not recommended (we can't use inheritance in future)
+		//car is tightly coupled with engin
+//		int status = super.start();
+		
+		//what if we create object of engin
+//		Engin e = new Engin();
+//		int status = e.start();
+		//if they made change in constructor of engin it affect on car class
+		// tightly coupled 
+		
+		
+		int status = eng.start();
+		if(status>=1) {
+			System.out.println("Journey started......");
+		}else {
+			System.out.println("Engin problem!!!!!!");
+		}
+	}
+}

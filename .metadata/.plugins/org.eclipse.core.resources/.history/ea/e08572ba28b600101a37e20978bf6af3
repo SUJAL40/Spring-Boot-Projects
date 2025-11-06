@@ -1,0 +1,23 @@
+package in.sujal.beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Robot {
+	
+	@Autowired
+	private Chip chip;
+	
+	public Robot() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void doWork() {
+		String type = chip.chipType();
+		if(type.equals("32-bit")) {
+			System.out.println("Performance is slow......");
+		}
+	}
+	
+}

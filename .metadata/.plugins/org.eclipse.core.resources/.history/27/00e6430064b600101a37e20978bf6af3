@@ -1,0 +1,13 @@
+package in.sujal;
+
+public class UserDao {
+	
+	public void init() {
+		System.out.println("Getting DB Connection.....");
+	}
+	
+	public void destroy() {
+		System.out.println("Closing DB Donnection.....");
+	}
+
+}

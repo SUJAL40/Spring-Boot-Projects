@@ -1,0 +1,4 @@
+
+public interface IEngin {
+	public int start();
+}

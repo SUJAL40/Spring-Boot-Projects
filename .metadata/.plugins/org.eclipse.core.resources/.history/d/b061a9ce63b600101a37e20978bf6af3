@@ -1,0 +1,9 @@
+package in.sujal;
+
+public class UserDao {
+	
+	public void init() {
+		System.out.println("Getting DB Connection.....");
+	}
+
+}

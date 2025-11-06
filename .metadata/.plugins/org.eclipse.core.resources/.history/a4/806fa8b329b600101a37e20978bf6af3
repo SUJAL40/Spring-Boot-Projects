@@ -1,0 +1,8 @@
+package in.sujal.config;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Car {
+
+}

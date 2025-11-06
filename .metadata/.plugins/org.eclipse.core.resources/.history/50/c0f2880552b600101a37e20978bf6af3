@@ -1,0 +1,14 @@
+package in.sujal.beans;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("mysqlDao")
+public class OracleDBRepository implements ReportDAO {
+
+	@Override
+	public void getData() {
+		System.out.println("Getting data form Oracle DB.....");
+
+	}
+
+}

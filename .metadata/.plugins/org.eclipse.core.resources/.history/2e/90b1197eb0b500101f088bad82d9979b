@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define all beans -->
+    <bean id="eng" class="in.sujal.spring.beans.DiselEngin" autowire-candidate="false"></bean>
+	<bean id="eng1" class="in.sujal.spring.beans.PetrolEngin"></bean>
+	<bean id="car" class="in.sujal.spring.beans.Car" autowire="byName">
+	
+	</bean>
+
+
+</beans>

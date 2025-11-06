@@ -1,0 +1,14 @@
+package in.sujal.test;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import in.sujal.config.AppConfig;
+
+public class App {
+
+	public static void main(String[] args) {
+		new AnnotationConfigApplicationContext(AppConfig.class);
+
+	}
+
+}

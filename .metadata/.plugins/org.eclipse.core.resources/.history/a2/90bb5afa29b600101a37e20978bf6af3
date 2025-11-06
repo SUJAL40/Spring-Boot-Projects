@@ -1,0 +1,10 @@
+package in.sujal.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration	//to represent java class as a configuration class instead of xml
+@ComponentScan(basePackage="in.sujal")
+public class AppConfig {
+
+}

@@ -1,0 +1,8 @@
+package in.sujal.beans;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ReportService {
+	private ReportDAO dao;
+}

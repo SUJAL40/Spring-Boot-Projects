@@ -1,0 +1,21 @@
+package in.sujal;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class UserDao {
+	
+	public void init() {
+		System.out.println("Getting DB connection....(init)");
+	}
+	
+	public void destroy() {
+		System.out.println("Closing DB Donnection.....(destroy)");
+	}
+
+	public void getData() {
+		System.out.println("Getting data from DB.....");
+	}
+	
+	
+}
