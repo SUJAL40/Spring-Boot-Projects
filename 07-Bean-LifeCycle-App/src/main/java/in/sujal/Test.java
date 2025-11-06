@@ -1,18 +1,15 @@
 package in.sujal;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Test {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-		UserDao dao = context.getBean(UserDao.class);
-		dao.getData();
-		ConfigurableApplicationContext ctxt = (ConfigurableApplicationContext)context;
-		ctxt.close();
 
-	}
+		ApplicationContext ctxt = new AnnotationConfigApplicationContext(AppConfig.class);
+		
+    }
 
 }
+

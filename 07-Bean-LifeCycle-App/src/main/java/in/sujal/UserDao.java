@@ -2,24 +2,23 @@ package in.sujal;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
+@Component("userDao") //writing the name of the bean
 public class UserDao implements InitializingBean,DisposableBean{
-	
-	
+
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("init method.....");
-		
-	}
-	
-	public void destroy() {
-		System.out.println("Closing DB Donnection.....(destroy)");
+		// TODO Auto-generated method stub
+		System.out.println("Getting data from db..");
+		System.out.println("Storing into the redis..");
 	}
 
-	
-	public void getData() {
-		System.out.println("Getting data from DB.....");
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Closing the connections..");
+		
 	}
-	
-	
+
 }
