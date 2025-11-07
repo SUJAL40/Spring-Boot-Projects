@@ -90,8 +90,27 @@ public class Application {
 //		System.out.println("Employee deleted successfully!");
 		
 		//insert record in table using custom query
-		repository.insertEmpData(5, "Business ", "Male", "Ajinkya",25_000);
-		System.out.println("New Employee Added Succesfully.....");
+//		repository.insertEmpData(5, "Business ", "Male", "Ajinkya",25_000);
+//		System.out.println("New Employee Added Succesfully.....");
+		
+		//TimeStamping in JPA
+		
+	    Employee emp = new Employee();
+		emp.setEmpId(101);
+		emp.setEmpName("Raja");
+		emp.setDept("HR");
+		emp.setEmpGender("Male");
+		repository.save(emp);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
