@@ -95,23 +95,31 @@ public class Application {
 		
 		//TimeStamping in JPA
 		
-	    Employee emp = new Employee();
-		emp.setEmpId(101);
-		emp.setEmpName("Raja");
-		emp.setDept("HR");
-		emp.setEmpGender("Male");
-		repository.save(emp);
+//	    Employee emp = new Employee();
+//		emp.setEmpId(101);
+//		emp.setEmpName("Raja");
+//		emp.setDept("HR");
+//		emp.setEmpSalary(5300.00);
+//		emp.setEmpGender("Male");
+//		repository.save(emp);
 		
+//		Employee emp = new Employee();
+//		emp.setEmpName("KJ");
+//		emp.setDept("Developer");
+//		emp.setEmpGender("Male");
+//		emp.setEmpSalary(4500.00);
+//		repository.save(emp);
 		
+		//Strategies to generate value for primary key
 		
-		
-		
-		
-		
-		
-		
-		
-		
+		Employee e = new Employee();
+		e.setEmpName("Ratan");
+		e.setDept("Intelligant");
+		e.setEmpGender("Male");
+		e.setEmpSalary(85000.0);
+		repository.save(e);
+
+		System.out.println("Record Inserted.....");
 	}
 
 }
