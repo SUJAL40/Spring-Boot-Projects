@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -13,57 +12,36 @@ import in.sujal.service.StudentService;
 
 @Controller
 public class StudentController {
-	
-//	@Autowired
-//	private StudentService service;
-//	
-//	
-//	@GetMapping("/")
-//	public String loadIndexPage(Model model) {
-//		return "index";
-//	}
-//	
-//	@InitBinder //whenever request comes to any method that should call the init Binder
-//	private void init(Model model) {
-//		model.addAttribute("student", new Student());
-//		model.addAttribute("courses", service.getCouses());
-//		model.addAttribute("prefTimings",service.getTimings());
-//	}
-//	
-//	@PostMapping("/save")
-//	public String saveStudent(Student s,Model model) {
-//		model.addAttribute("msg","Data Saved.....");
-//		return "index";
-//	}
-	
 
+    @Autowired
+    private StudentService service;
 
-	    @Autowired
-	    private StudentService service;
+    // Load common data for every request
+    @ModelAttribute
+    public void loadFormData(Model model) {
+        model.addAttribute("courses", service.getCouses());
+        model.addAttribute("prefTimings", service.getTimings());
+    }
 
-	    @GetMapping("/")
-	    public String loadIndexPage(Model model) {
+    @GetMapping("/")
+    public String loadIndexPage(Model model) {
+        model.addAttribute("student", new Student());
+        return "index";
+    }
 
-	        model.addAttribute("student", new Student());
-	        model.addAttribute("courses", service.getCouses());
+    @PostMapping("/save")
+    public String handleSubmit(Student s, Model model) {
 
-	        return "index";
-	    }
+        boolean isSaved = service.saveStudent(s);
 
-	    @PostMapping("/save")
-	    public String saveStudent(Student s, Model model) {
+        if (isSaved) {
+            model.addAttribute("msg", "Data Saved Successfully...");
+        } else {
+            model.addAttribute("msg", "Failed to Save Data!");
+        }
 
-	        System.out.println("=== SAVED DATA ===");
-	        System.out.println(s);
+        model.addAttribute("student", new Student()); // reset form
 
-	        model.addAttribute("msg", "Data Saved.....");
-
-	        model.addAttribute("student", new Student());      // reset object
-	        model.addAttribute("courses", service.getCouses()); // rebind dropdown
-
-	        return "index";
-	    }
-	
-
-	
+        return "index";
+    }
 }
